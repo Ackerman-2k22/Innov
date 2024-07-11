@@ -1,0 +1,28 @@
+{
+  "name": "theme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i src/input.css -o ./css/main.css",
+    "watch": "tailwindcss -i src/input.css -o ./css/main.css --watch",
+    "build:css": "tailwindcss build theme/static_src/input.css -o theme/static/css/dist/styles.css"
+  },
+  "devDependencies": {
+    "tailwindcss": "^2.2.19",
+    "@tailwindcss/forms": "^0.3.4",
+    "@tailwindcss/typography": "^0.4.1",
+    "@tailwindcss/aspect-ratio": "^0.2.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.4"
+  },
+  "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.13"
+  }
+}

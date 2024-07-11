@@ -5,8 +5,55 @@ from django.http import HttpResponseRedirect, JsonResponse
 from django.core.paginator import Paginator
 from django.db.models import Count, Q
 import json
-from .models import Utilisateur, Produit, Annonce, Transaction, Message, Commentaire, Suivi, DepotOrdure, Criticite, Panier
+from django.shortcuts import render
+from .models import Utilisateur,DepotOrdureForm, Produit, Annonce, Transaction, Message, Commentaire, Suivi, DepotOrdure, Criticite, Panier
+from .models import Utilisateur,DepotOrdureForm, Produit, Annonce, Transaction, Message, Commentaire, Suivi, DepotOrdure, Criticite, Panier
+from django import forms
 
+
+@login_required(login_url='/authentication/login')
+def signalization(request):
+    depots = DepotOrdure.objects.all()
+    return render(request, 'app/signalization.html', {'depots': depots})
+
+@login_required(login_url='/authentication/login')
+def collect(request):
+    return render(request, 'app/collect.html')
+
+@login_required(login_url='/authentication/login')
+def marketplace(request):
+    return render(request, 'app/marketplace_accueil.html')
+
+@login_required(login_url='/authentication/login')
+def product_view(request):
+    return render(request, 'app/product_view.html')
+@login_required(login_url='/authentication/login')
+def product2(request):
+    return render(request, 'app/product2.html')
+@login_required(login_url='/authentication/login')
+def annonces(request):
+    return render(request, 'app/annonces.html')
+
+class DepotOrdureForm(forms.ModelForm):
+    class Meta:
+        model = DepotOrdure
+        fields = ['localisation', 'photo', 'date_signalement', 'description', 'id_type', 'id_niveau_criticite']
+        widgets = {
+            'date_signalement': forms.DateInput(attrs={'type': 'date'}),
+        }
+
+@login_required(login_url='/authentication/login')
+def depot(request):
+    if request.method == 'POST':
+        form = DepotOrdureForm(request.POST, request.FILES)
+        if form.is_valid():
+            depot = form.save(commit=False)
+            depot.id_reporter = request.user.utilisateur  # Assigner l'utilisateur connecté comme reporter
+            depot.save()
+            return redirect('signalization')  # Rediriger vers la page de signalisation après l'enregistrement
+    else:
+        form = DepotOrdureForm()
+    return render(request, 'app/depot-signal.html', {'form': form})
 '''
 def search_clients(request):
     if request.method == 'POST':
@@ -60,6 +107,15 @@ def list_clients(request):
 
 '''
 
+
+
+def home(request):
+    return render(request, 'index.html')
+
+
+
+
+'''
 def search_utilisateurs(request):
     if request.method == 'POST':
         search_str = json.loads(request.body).get('searchText', '')
@@ -72,7 +128,8 @@ def search_utilisateurs(request):
         data = list(utilisateurs.values('id_utilisateur', 'nom', 'email'))
 
         return JsonResponse(data, safe=False)
-
+'''
+'''
 @login_required(login_url='/authentication/login')
 def index(request):
     transactions = Transaction.objects.all().order_by('-id_transaction')
@@ -90,6 +147,11 @@ def index(request):
     }
     return render(request, 'app/index.html', context)
 
+
+get_object_or_404
+
+
+
 def details(request, id_utilisateur):
     utilisateur = get_object_or_404(Utilisateur, pk=id_utilisateur)
     messages.success(request, "Utilisateur affiché avec succès.")
@@ -104,3 +166,6 @@ def list_utilisateurs(request):
     for utilisateur in utilisateurs:
         print(utilisateur.nom, utilisateur.number_of_transactions)
     return render(request, 'app/utilisateurs.html', {'utilisateurs': utilisateurs})
+
+
+'''

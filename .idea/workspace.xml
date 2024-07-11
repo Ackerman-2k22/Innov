@@ -4,58 +4,129 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd03f127-7c5c-4ad7-9a7c-36fbf9033ca6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Innov.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Innov/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Innov/asgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Innov/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Innov/static/css/adminstyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Innov/static/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Innov/static/css/dashboard.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Innov/static/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Innov/static/img/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Innov/static/js/chart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Innov/static/js/dashboard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Innov/static/js/filterIncidents.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Innov/static/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Innov/static/js/register.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Innov/static/js/searchClients.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Innov/static/js/searchIncidents.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Innov/static/js/stats.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Innov/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Innov/wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/migrations/0002_annonce_commentaire_criticite_depotordure_message_and_more.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/authentication/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/authentication/register.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/base_auth.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/partials/_messages.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/partials/_sidebar.html" afterDir="false" />
+    <list default="true" id="dd03f127-7c5c-4ad7-9a7c-36fbf9033ca6" name="Changes" comment="v1">
+      <change afterPath="$PROJECT_DIR$/Innov/static/Images/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Innov/static/Images/10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Innov/static/Images/11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Innov/static/Images/12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Innov/static/Images/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Innov/static/Images/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Innov/static/Images/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Innov/static/Images/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Innov/static/Images/6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Innov/static/Images/7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Innov/static/Images/8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Innov/static/Images/9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Innov/static/Images/bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Innov/static/Images/blurred-green-nature-background-with-wooden-table-mockup-product-display-generative-ai_971339-103.avif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Innov/static/Images/grid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Innov/static/Images/lukasz-szmigiel-2ShvY8Lf6l0-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Innov/static/Images/lukasz-szmigiel-jFCViYFYcus-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Innov/static/Images/wes-hicks-4PWqHpxhvQM-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/Images/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/Images/10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/Images/11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/Images/12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/Images/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/Images/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/Images/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/Images/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/Images/6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/Images/7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/Images/8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/Images/9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/Images/acton-crawford-RQTMCKicn40-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/Images/aleksandr-kadykov-h8aQ4PUViCA-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/Images/antoine-giret-7_TSzqJms4w-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/Images/bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/Images/blurred-green-nature-background-with-wooden-table-mockup-product-display-generative-ai_971339-103.avif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/Images/grid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/Images/john-cameron-0kpPu9WPVmU-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/Images/jon-moore-1PxGp8kkQyk-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/Images/kenny-eliason-8Yk4T-tDSYY-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/Images/lukasz-szmigiel-2ShvY8Lf6l0-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/Images/lukasz-szmigiel-jFCViYFYcus-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/Images/meghan-rodgers-9ZUbyjA2Akk-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/Images/rivage-dBu3wq2O5SM-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/Images/roberto-sorin-Qtj5RYq10vA-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/Images/wes-hicks-4PWqHpxhvQM-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/ajout-annonces.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/annonces.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/collect.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/depot-signal.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/input.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/marketplace_accueil.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/product2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/product_view.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/signalization.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/src/input.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/tailwind.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/view.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/postcss.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/app/annonces.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/app/collect.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/app/depot-signal.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/app/marketplace_accueil.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/app/product2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/app/product_view.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/app/signalization.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/theme/static/Images/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/theme/static/Images/10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/theme/static/Images/11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/theme/static/Images/12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/theme/static/Images/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/theme/static/Images/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/theme/static/Images/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/theme/static/Images/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/theme/static/Images/6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/theme/static/Images/7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/theme/static/Images/8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/theme/static/Images/9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/theme/static/Images/acton-crawford-RQTMCKicn40-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/theme/static/Images/aleksandr-kadykov-h8aQ4PUViCA-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/theme/static/Images/antoine-giret-7_TSzqJms4w-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/theme/static/Images/bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/theme/static/Images/blurred-green-nature-background-with-wooden-table-mockup-product-display-generative-ai_971339-103.avif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/theme/static/Images/grid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/theme/static/Images/john-cameron-0kpPu9WPVmU-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/theme/static/Images/jon-moore-1PxGp8kkQyk-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/theme/static/Images/kenny-eliason-8Yk4T-tDSYY-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/theme/static/Images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/theme/static/Images/lukasz-szmigiel-2ShvY8Lf6l0-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/theme/static/Images/lukasz-szmigiel-jFCViYFYcus-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/theme/static/Images/meghan-rodgers-9ZUbyjA2Akk-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/theme/static/Images/rivage-dBu3wq2O5SM-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/theme/static/Images/roberto-sorin-Qtj5RYq10vA-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/theme/static/Images/wes-hicks-4PWqHpxhvQM-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/theme/static/css/dist/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/theme/static/js/register.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/theme/static_src/input.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Innov.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Innov.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Innov/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Innov/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Innov/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/Innov/static/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Innov/static/img/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/Innov/static/Images/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Innov/static/js/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/Innov/static/js/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Innov/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Innov/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0002_annonce_commentaire_criticite_depotordure_message_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/authentication/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/authentication/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/authentication/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/authentication/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/authentication/register.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,42 +166,49 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Django Server.Innov.executor": "Run",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "django.template.preview.state": "SHOW_EDITOR_AND_PREVIEW",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/frann/PycharmProjects/Innov/templates",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Django Server.Innov.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR_AND_PREVIEW&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/frann/OneDrive/Bureau/Innovation/templates/app&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.build:css.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\frann\PycharmProjects\Innov\templates" />
-      <recent name="C:\Users\frann\PycharmProjects\Innov\Innov\static\img" />
-      <recent name="C:\Users\frann\PycharmProjects\Innov\Innov" />
+      <recent name="C:\Users\frann\OneDrive\Bureau\Innovation\templates\app" />
+      <recent name="C:\Users\frann\PycharmProjects\Innov\theme\static\JS" />
+      <recent name="C:\Users\frann\PycharmProjects\Innov\theme\static" />
+      <recent name="C:\Users\frann\PycharmProjects\Innov\theme\templates" />
+      <recent name="C:\Users\frann\PycharmProjects\Innov" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\frann\PycharmProjects\Innov\templates\app" />
+      <recent name="C:\Users\frann\PycharmProjects\Innov" />
+      <recent name="C:\Users\frann\PycharmProjects\Innov\Innov\static\Images" />
       <recent name="C:\Users\frann\PycharmProjects\Innov\templates" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.build:css">
     <configuration name="Innov" type="Python.DjangoServer" factoryName="Django server">
       <module name="Innov" />
       <option name="ENV_FILES" value="" />
@@ -156,6 +234,21 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="build:css" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build:css" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.build:css" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -177,8 +270,21 @@
       <workItem from="1720015188399" duration="1997000" />
       <workItem from="1720019543800" duration="1761000" />
       <workItem from="1720086886272" duration="10566000" />
-      <workItem from="1720165228557" duration="7934000" />
+      <workItem from="1720165228557" duration="9907000" />
+      <workItem from="1720300950389" duration="15507000" />
+      <workItem from="1720367531287" duration="39656000" />
+      <workItem from="1720511512886" duration="6624000" />
+      <workItem from="1720531709987" duration="9680000" />
     </task>
+    <task id="LOCAL-00001" summary="v1">
+      <option name="closed" value="true" />
+      <created>1720189360100</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1720189360100</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,5 +292,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="v1" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1" />
   </component>
 </project>

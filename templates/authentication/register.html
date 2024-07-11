@@ -1,56 +1,89 @@
-{% extends 'base_auth.html' %}
 {% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{% static 'css/dist/styles.css' %}" rel="stylesheet" />
+    <title>Register</title>
+</head>
+<body class="relative flex items-center justify-center w-screen h-screen bg-no-repeat bg-cover" style="background-image: url('{% static 'Images/lukasz-szmigiel-2ShvY8Lf6l0-unsplash.jpg' %}');">
+    <div class="absolute top-0 left-0 w-screen h-screen bg-black opacity-60"></div>
+    <div class="relative flex flex-col w-11/12 gap-2 px-4 py-4 mx-auto text-center text-white border-2 rounded-md shadow-xl sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-1/3 2xl:w-1/4 shadow-color-op">
+        <h1 class="text-2xl font-semibold uppercase">Inscription</h1>
+        <p class="mb-2 text-sm">Bienvenue! Suit nous dans cette aventure .</p>
+        
+        <form action="{% url 'register' %}" method="post">
 
-{% block extrastyle %}
-<link href="{% static 'css/main.css' %}" rel="stylesheet" />
-{% endblock %}
-
-{% block content %}
-
-<div class="container mt-5">
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            <div class="card shadow">
-                <div class="card-body">
-                  <div class="text-center mb-4">
-                    <img src="{% static 'img/logo.png' %}" alt="Logo de l'entreprise" style="max-width: 100px;"> 
-                </div>
-                    <h4 class="card-title text-center text-primary mb-4">Register</h4>
-                    <form action="{% url 'register' %}" method="post">
-                        {% csrf_token %}
-                        {% include 'partials/_messages.html' %}
-                        <div class="form-group">
-                            <label for="ameField" class="text-secondary">Name</label>
-                            <input type="text" name="name" id="nameField" class="form-control" placeholder="Name" value="{{ fieldValues.name }}" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="surnameField" class="text-secondary">Surname</label>
-                            <input type="text" name="surname" id="surnameField" class="form-control" placeholder="Surname" value="{{ fieldValues.surname }}">
-                        </div>
-                        <div class="form-group">
-                            <label for="phoneField" class="text-secondary">Phone Number</label>
-                            <input type="number" name="phone" id="phoneField" class="form-control" placeholder="Phone" value="{{ fieldValues.phone }}">
-                        </div>
-                        <div class="form-group">
-                            <label for="emailField" class="text-secondary">Email</label>
-                            <input type="email" name="email" id="emailField" class="form-control" placeholder="Email" value="{{ fieldValues.email }}" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="passwordField" class="text-secondary">Password</label>
-                            <input type="password" name="password" id="passwordField" class="form-control" placeholder="Password" required>
-                            <small class="float-right py-3 showPasswordToggle">SHOW</small>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block">Register</button>
-                    </form>
-                    <div class="text-center mt-3">
-                        <span class="text-muted">Already have an account ? </span><a href="{% url 'login' %}" class="text-success">Login</a>
-                    </div>
-                </div>
-            </div>
+            {% csrf_token %}
+            {% include 'partials/_messages.html' %}
+                    
+        <div class="flex flex-col w-11/12 gap-1 mx-auto gap-2">
+            <label for="nom" class="text-xl font-semibold text-left">Nom</label>
+            <input 
+                    name="name"
+                    id="nom" 
+                    type="text" 
+                    placeholder="Entrez votre nom" 
+                    class="px-3 py-1 text-white bg-transparent border-2 rounded-full outline-none" required>
         </div>
+        <div class="flex flex-col w-11/12 gap-1 mx-auto gap-2">
+            <label for="prenom" class="text-xl font-semibold text-left">Prenom</label>
+            <input 
+                    name="surname"
+                    id="prenom" 
+                    type="text" 
+                    placeholder="Entrez votre prenom" 
+                    class="px-3 py-1 text-white bg-transparent border-2 rounded-full outline-none" required>
+        </div>
+        <div class="flex flex-col w-11/12 gap-1 mx-auto gap-2">
+            <label for="tel" class="text-xl font-semibold text-left">Telephone</label>
+            <input 
+                    name="phone"
+                    id="tel" 
+                    type="text" 
+                    placeholder="Entrez votre numero de telephone" 
+                    class="px-3 py-1 text-white bg-transparent border-2 rounded-full outline-none" required>
+        </div>
+        <div class="flex flex-col w-11/12 gap-1 mx-auto gap-2">
+            <label for="email" class="text-xl font-semibold text-left">Email</label>
+            <input 
+                    name="email"
+                    id="email" 
+                    type="text" 
+                    placeholder="Entrez votre adresse mail"
+                    class="px-3 py-1 text-white bg-transparent border-2 rounded-full outline-none" required>
+        </div>
+        <div class="flex flex-col w-11/12 gap-1 mx-auto gap-2">
+            <label for="password" class="text-xl font-semibold text-left">Mot de passe</label>
+            <input 
+                    name="password"
+                    id="password" 
+                    type="password" 
+                    placeholder="Entrez votre mot de passe" 
+                    class="px-3 py-1 text-white bg-transparent border-2 rounded-full outline-none" required>
+            <small class="float-right py-3 showPasswordToggle">SHOW</small>
+        </div>
+        <div class="flex items-center gap-2 mx-auto text-md mb-10">
+            <input 
+                    type="checkbox" 
+                    name="enterprise" 
+                    id="enterprise" 
+                    class="form-checkbox">
+            <label for="enterprise">Etes vous une entreprise </label>
+        </div>
+                    <input 
+                type="submit"
+                value="Se connecter"
+                class="bg-color-secondary px-4 py-2 rounded-md text-xl w-[200px] mx-auto hover:bg-transparent hover:border-color-secondary border-2 border-color-secondary gap-2"
+                />
+        </form>
+        <p class="mt-2 text-center text-gray-100">
+            vous avez deja un compte ? <a href="{% url 'login' %}" class="text-color-primary-dark">Connectez-vous</a>
+        </p>
     </div>
-</div>
-
 <script src="{% static 'js/register.js' %}"></script>
-
-{% endblock content %}
+</body>
+</html>

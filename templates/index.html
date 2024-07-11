@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>GREEN-Env+</title>
+        <link href="{% static 'css/dist/styles.css' %}" rel="stylesheet" />
+    </head>
+    <body class="tracking-wider bg-color-primary text-color-white">
+        <header>
+            <nav class="container absolute flex items-center justify-between">
+                <div class="py-5 text-3xl font-bold text-color-secondary">
+                    <a href="#home">
+                        <span class="text-color-white">Green</span>Env+
+                    </a>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section id="home">
+                <div class="container flex items-center justify-center w-full h-screen py-20">
+                    <div class="z-20 flex flex-col items-center lg:flex-row">
+                        <div class="mt-16 mb-12 text-center lg:text-left lg:pr-10">
+                            <h1 class="text-3xl font-bold leading-snug lg:text-4xl">Une nature plus saine.<br> Un avenir radieux </h1> 
+                            <p class="mb-10 leading-relaxed">Nous travaillons activement à rendre le monde meileur grâce à des actions salvatrices !</p>
+                            <a href="{% url 'login' %}">
+                                <button class="py-3 font-bold capitalize duration-200 ease-in rounded-md bg-color-secondary px-9 hover:opacity-80" >
+                            Commencer
+                                </button>
+                            </a>
+                        </div>
+                        <div class="lg:w-1/2">
+                            <img src="{% static 'Images/lukasz-szmigiel-jFCViYFYcus-unsplash.jpg' %}" alt="Image">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

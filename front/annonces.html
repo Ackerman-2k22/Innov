@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Annonces</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body class="tracking-wider bg-color-primary text-color-white">
+        <header>
+            <nav class="container flex items-center justify-between">
+                <div class="py-5 text-3xl font-bold text-color-secondary">
+                    <a href="#home">
+                        <span class="text-color-white">Green</span>Env+
+                    </a>
+                </div>
+                <div>
+                    <ul class="items-center hidden space-x-6 lg:flex">
+                        <li><a href="signalization.html" class="duration-200 ease-in hover:text-color-secondary">Depots</a></li>
+                        <li><a href="marketplace_accueil.html" class="duration-200 ease-in hover:text-color-secondary">GreenMarket</a></li>
+                        <li><a href="annonces.html" class="duration-200 ease-in hover:text-color-secondary">Annonces</a></li>
+                        <li><a href="#Parametres" class="duration-200 ease-in hover:text-color-secondary">Parametres</a></li>
+                        <li><button class="py-3 font-bold capitalize duration-200 ease-in rounded-lg bg-color-secondary px-9 hover:bg-opacity-80">Free trial</button></li>
+                    </ul>
+                </div>
+                <!--Mobile screen-->
+                <div id="hamburger" class="z-50 cursor-pointer lg:hidden">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+
+                <div id="menu" class="bg-color-primary-dark h-[100vh] absolute inset-0 hidden">
+                    <ul class="grid h-full py-20 place-items-center">
+                        <li><a id="hLink" href="signalization.html" class="duration-200 ease-in hover:text-color-secondary">Depots</a></li>
+                        <li><a id="hLink" href="marketplace_accueil.html" class="duration-200 ease-in hover:text-color-secondary">GreenMarket</a></li>
+                        <li><a id="hLink" href="annonces.html" class="duration-200 ease-in hover:text-color-secondary">Annonces</a></li>
+                        <li><a id="hLink" href="#Parametres" class="duration-200 ease-in hover:text-color-secondary">Parametres</a></li>
+                        <li><button class="py-3 font-bold capitalize duration-200 ease-in rounded-lg bg-color-secondary px-9 hover:bg-opacity-80">Free trial</button></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section class="bg-color-primary">
+                <div class="container py-20">
+                    <!-- Section Astuces -->
+                    <div class="mb-12">
+                        <h2 class="mb-4 text-2xl font-semibold">Astuces</h2>
+                        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+                            <!-- Carte Astuce 1 -->
+                            <div class="p-6 transition duration-300 rounded-lg shadow-lg bg-color-primary-dark hover:bg-transparent">
+                                <h3 class="mb-2 text-xl font-bold">Réduisez votre consommation de plastique</h3>
+                                <p class="text-gray-500">Apportez vos propres sacs réutilisables lorsque vous faites vos courses et optez pour des bouteilles d'eau réutilisables.</p>
+                            </div>
+                            <!-- Carte Astuce 2 -->
+                            <div class="p-6 transition duration-300 rounded-lg shadow-lg bg-color-primary-dark hover:bg-transparent">
+                                <h3 class="mb-2 text-xl font-bold">Compostez vos déchets alimentaires</h3>
+                                <p class="text-gray-500">Transformez vos restes de fruits, légumes et autres déchets organiques en compost pour nourrir votre jardin.</p>
+                            </div>
+                            <!-- Carte Astuce 3 -->
+                            <div class="p-6 transition duration-300 rounded-lg shadow-lg bg-color-primary-dark hover:bg-transparent">
+                                <h3 class="mb-2 text-xl font-bold">Réutilisez les objets du quotidien</h3>
+                                <p class="text-gray-500">Donnez une seconde vie aux objets en les réparant, en les transformant ou en les donnant à des associations.</p>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!-- Section Actualités -->
+                    <div class="mb-12">
+                        <h2 class="mb-4 text-2xl font-semibold">Actualités</h2>
+                        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+                            <!-- Carte Actualité 1 -->
+                            <div class="p-6 transition duration-300 rounded-lg shadow-lg bg-color-primary-dark hover:bg-transparent">
+                                <h3 class="mb-2 text-xl font-bold">Nouvelle usine de recyclage ouverte</h3>
+                                <p class="text-gray-500">Une nouvelle usine de recyclage de plastique a été inaugurée, contribuant ainsi à la réduction des déchets et à la protection de l'environnement.</p>
+                            </div>
+                            <!-- Carte Actualité 2 -->
+                            <div class="p-6 transition duration-300 rounded-lg shadow-lg bg-color-primary-dark hover:bg-transparent">
+                                <h3 class="mb-2 text-xl font-bold">Initiative de compostage communautaire</h3>
+                                <p class="text-gray-500">Une communauté locale lance un programme de compostage pour encourager les résidents à participer à la réduction des déchets et à la création de compost.</p>
+                            </div>
+                            <!-- Carte Actualité 3 -->
+                            <div class="p-6 transition duration-300 rounded-lg shadow-lg bg-color-primary-dark hover:bg-transparent">
+                                <h3 class="mb-2 text-xl font-bold">Nouvelles réglementations sur le tri des déchets</h3>
+                                <p class="text-gray-500">Le gouvernement introduit de nouvelles réglementations visant à améliorer le tri des déchets et à promouvoir le recyclage dans les entreprises et les foyers.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        <!-- Bouton Ajouter -->
+        <div class="fixed bottom-6 right-6">
+            <a href="ajout-annonces.html">
+                <button class="p-4 text-white rounded-full shadow-lg bg-color-secondary hover:bg-opacity-80 focus:outline-none focus:ring-2 focus:ring-color-op focus:ring-opacity-75">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                    </svg>
+                </button>
+            </a>
+        </div>
+                
+                </div>
+
+            </section>
+
+        </main>
+        
+        <script>
+            const hamburger = document.querySelector('#hamburger');
+            const menu = document.querySelector('#menu');
+            const hLinks = document.querySelectorAll('#hLink');
+            const faSolid = document.querySelector(".fa-solid");
+
+            hamburger.addEventListener("click", () => {
+                menu.classList.toggle('hidden');
+                faSolid.classList.toggle('fa-xmark');
+            });
+
+            hLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
+                    faSolid.classList.toggle('fa-xmark');
+                });
+            });
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Collect</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body class="tracking-wider bg-color-primary text-color-white">
+        <header>
+            <nav class="container flex items-center justify-between">
+                <div class="py-5 text-3xl font-bold text-color-secondary">
+                    <a href="#home">
+                        <span class="text-color-white">Green</span>Env+
+                    </a>
+                </div>
+                <div>
+                    <ul class="items-center hidden space-x-6 lg:flex">
+                        <li><a href="signalization.html" class="duration-200 ease-in hover:text-color-secondary">Depots</a></li>
+                        <li><a href="marketplace_accueil.html" class="duration-200 ease-in hover:text-color-secondary">GreenMarket</a></li>
+                        <li><a href="annonces.html" class="duration-200 ease-in hover:text-color-secondary">Annonces</a></li>
+                        <li><a href="#Parametres" class="duration-200 ease-in hover:text-color-secondary">Parametres</a></li>
+                        <li><button class="py-3 font-bold capitalize duration-200 ease-in rounded-lg bg-color-secondary px-9 hover:bg-opacity-80">Free trial</button></li>
+                    </ul>
+                </div>
+                <!--Mobile screen-->
+                <div id="hamburger" class="z-50 cursor-pointer lg:hidden">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+
+                <div id="menu" class="bg-color-primary-dark h-[100vh] absolute inset-0 hidden">
+                    <ul class="grid h-full py-20 place-items-center">
+                        <li><a id="hLink" href="#Depots" class="duration-200 ease-in hover:text-color-secondary">Depots</a></li>
+                        <li><a id="hLink" href="marketplace_accueil.html" class="duration-200 ease-in hover:text-color-secondary">GreenMarket</a></li>
+                        <li><a id="hLink" href="annonces.html" class="duration-200 ease-in hover:text-color-secondary">Annonces</a></li>
+                        <li><a id="hLink" href="#Parametres" class="duration-200 ease-in hover:text-color-secondary">Parametres</a></li>
+                        <li><button class="py-3 font-bold capitalize duration-200 ease-in rounded-lg bg-color-secondary px-9 hover:bg-opacity-80">Free trial</button></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section class="bg-color-primary">
+                <div class="container py-20">
+                    <div class="m-auto mb-10 text-center lg:w-1/2">
+                        <h2 class="mb-4 font-bold text-color-primary-light">Collecter les depots</h2>
+                    </div>
+                    <div class="p-6 mb-6 rounded-lg shadow-lg">
+                        <form id="searchForm">
+                            <div class="mb-4">
+                                <label for="location" class="block mb-2 font-bold text-color-primary-light">Votre Localisation:</label>
+                                <input type="text" id="location" name="location" class="w-full px-3 py-2 leading-tight text-gray-800 border rounded shadow appearance-none focus:outline-none focus:shadow-outline" placeholder="Entrez votre localisation">
+                            </div>
+                            <div class="mb-4">
+                                <label for="wasteType" class="block mb-2 font-bold text-color-primary-light">Type de Déchets:</label>
+                                <select id="wasteType" name="wasteType" class="w-full px-3 py-2 leading-tight text-gray-800 border rounded shadow appearance-none focus:outline-none focus:shadow-outline">
+                                    <option value="recyclable">Recyclable</option>
+                                    <option value="non-recyclable">Non Recyclable</option>
+                                    <option value="organique">Organique</option>
+                                    <option value="dangereux">Dangereux</option>
+                                </select>
+                                </div>
+                                <div class="flex justify-center">
+                                <button type="submit" class="px-4 py-2 font-bold text-white rounded bg-color-secondary hover:bg-opacity-80 focus:outline-none focus:shadow-outline">Rechercher</button>
+                                </div>
+                        </form>
+                            </div>
+                        
+                            <div class="p-6 rounded-lg shadow-lg bg-color-primary">
+                                <h2 class="mb-4 text-xl font-bold">Résultats</h2>
+                                <table class="min-w-full bg-color-primary">
+                                <thead>
+                                    <tr>
+                                    <th class="px-4 py-2 leading-tight text-left border-b-2 border-gray-200">ID Dépôt</th>
+                                    <th class="px-4 py-2 leading-tight text-left border-b-2 border-gray-200">Amplitude</th>
+                                    <th class="px-4 py-2 leading-tight text-left border-b-2 border-gray-200">Options</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="resultsTable">
+                                <!-- Les résultats de la recherche seront insérés ici -->
+                                </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        
+    
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+        
+        <script>
+            const hamburger = document.querySelector('#hamburger');
+            const menu = document.querySelector('#menu');
+            const hLinks = document.querySelectorAll('#hLink');
+            const faSolid = document.querySelector(".fa-solid");
+
+            hamburger.addEventListener("click", () => {
+                menu.classList.toggle('hidden');
+                faSolid.classList.toggle('fa-xmark');
+            });
+
+            hLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
+                    faSolid.classList.toggle('fa-xmark');
+                });
+            });
+
+            document.getElementById('searchForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Exemple de données simulées
+            const results = [
+                { id: 1, amplitude: '10km' },
+                { id: 2, amplitude: '15km' },
+                { id: 3, amplitude: '20km' },
+            ];
+
+            const resultsTable = document.getElementById('resultsTable');
+            resultsTable.innerHTML = '';
+
+            results.forEach(result => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                <td class="px-4 py-2 border-b border-gray-200">${result.id}</td>
+                <td class="px-4 py-2 border-b border-gray-200">${result.amplitude}</td>
+                <td class="px-4 py-2 border-b border-gray-200">
+                    <a href="view.html?id=${result.id}" class="px-2 py-1 font-bold text-white rounded bg-color-secondary hover:bg-green-700 focus:outline-none focus:shadow-outline">Voir</a>
+                </td>
+                `;
+                resultsTable.appendChild(row);
+            });
+            });
+        </script>
+    </body>
+</html>

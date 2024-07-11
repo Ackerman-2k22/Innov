@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Depot-signal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/dist/styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="tracking-wider bg-color-primary text-color-white">
+    <header>
+        <nav class="container flex items-center justify-between">
+            <div class="py-5 text-3xl font-bold text-color-secondary">
+                <a href="#home">
+                    <span class="text-color-white">Green</span>Env+
+                </a>
+            </div>
+            <div>
+                <ul class="items-center hidden space-x-6 lg:flex">
+                    <li><a href="{% url 'signalization' %}" class="duration-200 ease-in hover:text-color-secondary">Depots</a></li>
+                    <li><a href="{% url 'marketplace_accueil' %}" class="duration-200 ease-in hover:text-color-secondary">GreenMarket</a></li>
+                    <li><a href="{% url 'annonces' %}" class="duration-200 ease-in hover:text-color-secondary">Annonces</a></li>
+                    <li><a href="#Parametres" class="duration-200 ease-in hover:text-color-secondary">Parametres</a></li>
+                    <li><button class="py-3 font-bold capitalize duration-200 ease-in rounded-lg bg-color-secondary px-9 hover:bg-opacity-80">Free trial</button></li>
+                </ul>
+            </div>
+            <!--Mobile screen-->
+            <div id="hamburger" class="z-50 cursor-pointer lg:hidden">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <div id="menu" class="bg-color-primary-dark h-[100vh] absolute inset-0 hidden">
+                <ul class="grid h-full py-20 place-items-center">
+                    <li><a id="hLink" href="{% url 'signalization' %}" class="duration-200 ease-in hover:text-color-secondary">Depots</a></li>
+                    <li><a id="hLink" href="{% url 'marketplace_accueil' %}" class="duration-200 ease-in hover:text-color-secondary">GreenMarket</a></li>
+                    <li><a id="hLink" href="{% url 'annonces' %}" class="duration-200 ease-in hover:text-color-secondary">Annonces</a></li>
+                    <li><a id="hLink" href="#Parametres" class="duration-200 ease-in hover:text-color-secondary">Parametres</a></li>
+                    <li><button class="py-3 font-bold capitalize duration-200 ease-in rounded-lg bg-color-secondary px-9 hover:bg-opacity-80">Free trial</button></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="bg-color-primary">
+            <div class="container py-20">
+                <div class="m-auto mb-10 text-center lg:w-1/2">
+                    <h2 class="mb-4 font-bold text-color-primary-light">Signaler le depot</h2>
+                    <p>Selectionnez l'emplacement de votre depot</p>
+                </div>
+                <div class="relative w-full h-96">
+                    <div class="mapouter">
+                        <div class="gmap_canvas">
+                            <iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Yansoki&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                            <a href="https://embed-googlemap.com">embed google maps in website</a>
+                        </div>
+                        <style>
+                        .mapouter{position:relative;text-align:right;width:100%;height:400px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:400px;}.gmap_iframe {height:400px!important;}
+                        </style>
+                </div>
+                </div>
+            </div>
+
+            <div class="max-w-4xl p-5 mx-auto rounded-md shadow-md">
+                <h2 class="mb-6 text-2xl font-bold text-center text-color-primary-light">Signaler un Dépôt d'Ordures</h2>
+                
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <div class="mt-6 text-center">
+                        <button type="submit" class="px-6 py-2 text-white rounded-md bg-color-secondary hover:opacity-60 focus:outline-none focus:ring-2 focus:ring-color-secondary-dark">
+                            Envoyer
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    
+    <script>
+        const hamburger = document.querySelector('#hamburger');
+        const menu = document.querySelector('#menu');
+        const hLinks = document.querySelectorAll('#hLink');
+        const faSolid = document.querySelector(".fa-solid");
+
+        hamburger.addEventListener("click", () => {
+            menu.classList.toggle('hidden');
+            faSolid.classList.toggle('fa-xmark');
+        });
+
+        hLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                faSolid.classList.toggle('fa-xmark');
+            });
+        });
+    </script>
+</body>
+</html>

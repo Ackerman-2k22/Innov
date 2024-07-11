@@ -1,21 +1,16 @@
 from django.db import models
+from django import forms
 
-# Create your models here.
-'''class Clients(models.Model):
-    client_id = models.AutoField(primary_key=True)
-    username = models.CharField(unique=True, blank=True, null=True, max_length=255)
-    phone_number = models.CharField(unique=True, blank=True, null=True, max_length=9)
-
-    class Meta:
-        db_table = 'clients'
-
-    def __str__(self):
-        return self.username
-'''
 
 class Statut(models.TextChoices):
     ACTIVE = 'ACTIVE', 'Active'
     VENDU = 'VENDU', 'Vendu'
+
+
+    
+class Statut_ordure(models.TextChoices):
+    COLLECTE = 'COLLECTE', 'Collecté'
+    NON_COLLECTE = 'NON_COLLECTE', 'Non Collecté'
 
 class Etat(models.TextChoices):
     NEUF = 'NEUF', 'Neuf'
@@ -25,6 +20,20 @@ class Niveau(models.TextChoices):
     FAIBLE = 'FAIBLE', 'Faible'
     MOYEN = 'MOYEN', 'Moyen'
     ELEVE = 'ELEVE', 'Élevé'
+
+class Criticite(models.Model):
+    id_criticite = models.AutoField(primary_key=True)
+    niveau = models.CharField(max_length=10, choices=Niveau.choices)
+    description = models.TextField()
+
+class Type(models.Model):
+    id_type = models.AutoField(primary_key=True)
+    type = models.CharField(max_length=50)
+    description = models.TextField()
+
+    def __str__(self):
+        return self.type
+    
 
 class Utilisateur(models.Model):
     id_utilisateur = models.AutoField(primary_key=True)
@@ -48,7 +57,7 @@ class Utilisateur(models.Model):
 class Produit(models.Model):
     id_produit = models.AutoField(primary_key=True)
     nom = models.CharField(max_length=255)
-    description = models.TextField()
+    description = models.TextField(max_length=255)
     categorie = models.CharField(max_length=255)
     prix = models.FloatField()
     etat = models.CharField(max_length=10, choices=Etat.choices)
@@ -145,8 +154,13 @@ class DepotOrdure(models.Model):
     localisation = models.CharField(max_length=255)
     photo = models.ImageField(upload_to='photos/')
     date_signalement = models.DateField()
-    id_niveau_criticite = models.ForeignKey('Criticite', on_delete=models.CASCADE)
+    description = models.TextField()
+    id_type = models.ForeignKey(Type, on_delete=models.CASCADE)
+    id_niveau_criticite = models.ForeignKey(Criticite, on_delete=models.CASCADE)
     id_reporter = models.ForeignKey(Utilisateur, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"{self.localisation} - {self.date_signalement}"
 
     def signaler_depot(self):
         pass
@@ -157,9 +171,19 @@ class DepotOrdure(models.Model):
     def supprimer_depot(self):
         pass
 
-class Criticite(models.Model):
-    id_criticite = models.AutoField(primary_key=True)
-    niveau = models.CharField(max_length=10, choices=Niveau.choices)
+class DepotOrdureForm(forms.ModelForm):
+    class Meta:
+        model = DepotOrdure
+        fields = ['localisation', 'photo', 'date_signalement', 'description', 'id_type', 'id_niveau_criticite', 'id_reporter']
+        widgets = {
+            'date_signalement': forms.DateInput(attrs={'type': 'date'}),
+        }
+
+
+
+class Type_ordure(models.Model):
+    id_type = models.AutoField(primary_key=True)
+    type = models.CharField(max_length=10, choices=Niveau.choices)
     description = models.TextField()
 
     def ajouter_criticite(self):
